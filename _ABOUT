@@ -1,0 +1,9 @@
+1.0.0.0
+| | | |
+| | | |_Correções - versão de Correção(PATCH): quando corrigir falhas mantendo compatibilidade.
+| | |
+| | |_Release - Rótulos adicionais para pré-lançamento(pre-release)
+| |
+| |_Menor - versão Menor(MINOR): quando adicionar funcionalidades mantendo compatibilidade, e
+|
+|_Maior - versão Maior(MAJOR): quando fizer mudanças incompatíveis na API.
