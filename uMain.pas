@@ -880,6 +880,7 @@ end;
 procedure TfrmMain.FRM_REVERTER_ARQUIVOS();
 var
   iContArquivos                 : Integer;
+  iIDXTermo                     : Integer;
   sArquivo                      : string;
 BEGIN
 
@@ -888,7 +889,11 @@ BEGIN
   begin
     if chklstArquivosProcessados.Checked[iContArquivos] then
     begin
-      sArquivo := objCore.objString.getTermo(2, ' - ',  chklstArquivosProcessados.Items.Strings[iContArquivos]);
+
+      sArquivo  := chklstArquivosProcessados.Items.Strings[iContArquivos];
+      iIDXTermo := pos(' - ', sArquivo);
+      delete(sArquivo, 1, iIDXTermo + 2);
+      //sArquivo := objCore.objString.getTermo(2, ' - ',  chklstArquivosProcessados.Items.Strings[iContArquivos]);
       objCore.objParametrosDeEntrada.STL_LISTA_ARQUIVOS_REVERTER.Add(sArquivo);
     end;
   end;
